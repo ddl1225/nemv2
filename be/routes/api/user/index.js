@@ -1,24 +1,17 @@
 var express = require('express');
 var createError = require('http-errors');
 var router = express.Router();
+const User = require('../../../models/users');
 
-
-const us = [
-    {
-        name: '김김',
-        age: 14
-    },
-    {
-        name: 'dldldl',
-        age: 24
-    },
-]
 //읽는다
 router.get('/', function(req, res, next) {
-    console.log(req.query)
-    console.log(req.body)
-
-    res.send({users: us})
+    User.find()
+        .then(r => {
+            res.send({success:true, user:r})
+        })
+        .catch(e => {
+            res.send({success:false})
+        })
 });
 //보낸다
 router.post('/', function(req, res, next) {

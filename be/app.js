@@ -1,3 +1,5 @@
+const mongoose = require('mongoose');
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -48,7 +50,8 @@ module.exports = app;
 //몽구스 사용방법
 //몽구스 연결
 
-mongoose.connect('mongodb://localhost:27017/nemv',{useNewUrlParser:true,  useUnifiedTopology: true }, function (err) {
+ mongoose.connect('mongodb://localhost:27017/nemv',{useNewUrlParser:true,  useUnifiedTopology: true }, function (err) {
+ // mongoose.connect('mongodb://localhost:27017/nemv',{useNewUrlParser:true,  useUnifiedTopology: true }, function (err) {
   if (err) return console.log(err)
   console.log('mongoose 연결')
 
