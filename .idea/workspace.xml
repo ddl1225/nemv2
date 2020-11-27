@@ -2,26 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91bd6584-1fb0-436b-babf-cb58cda5e67e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fe/src/assets/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/src/layout/home/AppBar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/src/layout/home/Drawer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/src/layout/home/Footer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/src/layout/home/View.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/src/layout/home/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/src/views/Calculator.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/src/views/address.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/src/views/count.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/src/views/feeCal.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/src/views/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/src/views/infor.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/src/views/join.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/src/views/mobile.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe/src/views/insertModal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe/src/views/json/mixin/commons.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/be/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/models/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/be/models/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/routes/api/user/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/be/routes/api/user/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/fe/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/fe/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/fe/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe/src/views/Calculator.vue" beforeDir="false" afterPath="$PROJECT_DIR$/fe/src/views/Calculator.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe/src/views/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/fe/src/views/index.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,19 +16,38 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7002817">
+    <splitter split-orientation="horizontal" split-proportion="0.6027907">
       <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/fe/src/views/index.vue">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/fe/src/views/Calculator.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="286">
-                  <caret line="120" column="60" selection-start-line="120" selection-start-column="60" selection-end-line="120" selection-end-column="60" />
+                <state relative-caret-position="330">
+                  <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/fe/src/views/insertModal.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="594">
+                  <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/fe/src/router/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="665">
+                  <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
                   <folding>
-                    <element signature="n#style#0;n#v-row#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
-                    <element signature="n#v-col#0;n#v-row#0;n#v-container#0;n#template#0;n#!!top" />
-                    <element signature="n#v-col#1;n#v-row#0;n#v-container#0;n#template#0;n#!!top" />
-                    <element signature="n#v-row#1;n#v-container#0;n#template#0;n#!!top" />
+                    <element signature="e#0#22#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -51,26 +56,26 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/fe/src/views/count.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+                <state relative-caret-position="247">
+                  <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/fe/src/views/feeCal.vue">
+            <entry file="file://$PROJECT_DIR$/fe/src/views/user.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="171">
-                  <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+                <state relative-caret-position="861">
+                  <caret line="144" selection-start-line="144" selection-end-line="145" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/fe/src/layout/home/View.vue">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/fe/src/layout/home/AppBar.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="228">
-                  <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+                <state relative-caret-position="411">
+                  <caret line="44" column="10" lean-forward="true" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -78,49 +83,22 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/fe/src/layout/home/Drawer.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="570">
-                  <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+                <state relative-caret-position="107">
+                  <caret line="16" column="62" lean-forward="true" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
                 </state>
               </provider>
             </entry>
           </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/fe/src/router/index.js">
+            <entry file="file://$PROJECT_DIR$/fe/src/views/index.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-361">
-                  <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+                <state relative-caret-position="419">
+                  <caret line="341" column="60" lean-forward="true" selection-start-line="341" selection-start-column="13" selection-end-line="341" selection-end-column="60" />
                   <folding>
-                    <element signature="e#0#22#0" expanded="true" />
+                    <element signature="n#style#0;n#v-row#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="n#v-col#0;n#v-row#0;n#v-container#0;n#template#0;n#!!top" />
+                    <element signature="n#v-row#1;n#v-container#0;n#template#0;n#!!top" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/fe/src/views/user.vue">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="430">
-                  <caret line="144" selection-start-line="144" selection-end-line="145" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="true" current-in-tab="false">
-            <entry file="remoteDeploymentFS://&lt;f44e3e8c-2cc8-486e-80a0-05c96fc99b83&gt;/public_html/radger_t2.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-4974" />
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/fe/src/layout/home/AppBar.vue">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="741">
-                  <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
                 </state>
               </provider>
             </entry>
@@ -128,6 +106,13 @@
         </leaf>
       </split-second>
     </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -153,7 +138,14 @@
       <find>pay_calc</find>
       <find>toggleMonthFee</find>
       <find>Drawer</find>
-      <find>show_content</find>
+      <find>type1</find>
+      <find>card</find>
+      <find>type1Click</find>
+      <find>cards</find>
+      <find>feelTotalC</find>
+      <find>CommonsService</find>
+      <find>password_check</find>
+      <find>closeModalCall</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -183,7 +175,6 @@
         <option value="$PROJECT_DIR$/fe/src/views/address.vue" />
         <option value="$PROJECT_DIR$/fe/src/views/join.vue" />
         <option value="$PROJECT_DIR$/fe/src/views/mobile.vue" />
-        <option value="$PROJECT_DIR$/fe/src/views/Calculator.vue" />
         <option value="$PROJECT_DIR$/fe/src/router/index.js" />
         <option value="$PROJECT_DIR$/fe/src/views/infor.vue" />
         <option value="$PROJECT_DIR$/fe/src/layout/home/index.vue" />
@@ -193,21 +184,28 @@
         <option value="$PROJECT_DIR$/fe/src/views/count.vue" />
         <option value="$PROJECT_DIR$/fe/src/views/fee Cal.vue" />
         <option value="$PROJECT_DIR$/fe/src/views/feeCal.vue" />
+        <option value="$PROJECT_DIR$/fe/.eslintrc.js" />
         <option value="$PROJECT_DIR$/fe/src/views/index.vue" />
+        <option value="$PROJECT_DIR$/fe/src/views/json/mixin/commons.js" />
+        <option value="$PROJECT_DIR$/fe/src/views/Calculator.vue" />
+        <option value="$PROJECT_DIR$/fe/src/views/insertModal.vue" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="64" />
-    <option name="y" value="-8" />
-    <option name="width" value="1864" />
-    <option name="height" value="1096" />
+    <option name="x" value="1909" />
+    <option name="y" value="49" />
+    <option name="width" value="3863" />
+    <option name="height" value="2123" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Course" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,24 +216,6 @@
             <path>
               <item name="nemv2" type="b2602c69:ProjectViewProjectNode" />
               <item name="nemv2" type="462c0819:PsiDirectoryNode" />
-              <item name="be" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nemv2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nemv2" type="462c0819:PsiDirectoryNode" />
-              <item name="be" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nemv2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nemv2" type="462c0819:PsiDirectoryNode" />
-              <item name="be" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nemv2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nemv2" type="462c0819:PsiDirectoryNode" />
               <item name="fe" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -243,42 +223,6 @@
               <item name="nemv2" type="462c0819:PsiDirectoryNode" />
               <item name="fe" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nemv2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nemv2" type="462c0819:PsiDirectoryNode" />
-              <item name="fe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nemv2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nemv2" type="462c0819:PsiDirectoryNode" />
-              <item name="fe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nemv2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nemv2" type="462c0819:PsiDirectoryNode" />
-              <item name="fe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nemv2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nemv2" type="462c0819:PsiDirectoryNode" />
-              <item name="fe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nemv2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nemv2" type="462c0819:PsiDirectoryNode" />
-              <item name="fe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nemv2" type="b2602c69:ProjectViewProjectNode" />
@@ -291,9 +235,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Course" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -304,21 +245,22 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606349218962" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606466185528" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../olligo-admin" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.6\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\nemv2\fe\src\views" />
+      <recent name="D:\project\nemv2\be\routes\api\test" />
+      <recent name="D:\project\nemv2\be\routes\api" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\project\nemv2\fe\src\assets" />
       <recent name="D:\project\nemv2\fe\src\layout\home" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\project\nemv2\be\routes\api\test" />
-      <recent name="D:\project\nemv2\be\routes\api" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -345,24 +287,24 @@
       <updated>1605600442398</updated>
       <workItem from="1605600445185" duration="25690000" />
       <workItem from="1606089363989" duration="72697000" />
+      <workItem from="1606436470735" duration="20782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98387000" />
+    <option name="totallyTimeSpent" value="119169000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-8" width="1864" height="1096" extended-state="6" />
+    <frame x="1913" y="33" width="2575" height="1415" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18348116" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1332008" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -370,7 +312,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.10914761" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29407176" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -378,12 +320,13 @@
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Tail" order="14" />
+      <window_info anchor="bottom" id="TypeScript" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Remote Host" order="5" visible="true" weight="0.22671841" />
+      <window_info anchor="right" id="Remote Host" order="5" visible="true" weight="0.01192843" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Key Promoter X" order="7" />
       <window_info anchor="right" id="Database" order="8" />
@@ -470,16 +413,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-361">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fe/src/views/infor.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -498,13 +431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe/src/views/Calculator.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
@@ -560,24 +486,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe/src/layout/home/Drawer.vue">
+    <entry file="file://$PROJECT_DIR$/fe/src/views/fee Cal.vue" />
+    <entry file="file://$PROJECT_DIR$/fe/src/views/user.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        <state relative-caret-position="861">
+          <caret line="144" selection-start-line="144" selection-end-line="145" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe/src/views/fee Cal.vue">
+    <entry file="file://$PROJECT_DIR$/fe/node_modules/eslint/lib/rules/comma-spacing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe/src/layout/home/View.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        <state relative-caret-position="285">
+          <caret line="178" column="67" lean-forward="true" selection-start-line="178" selection-start-column="67" selection-end-line="178" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -588,37 +508,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fe/src/layout/home/View.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe/.eslintrc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fe/src/views/count.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        <state relative-caret-position="247">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe/src/layout/home/AppBar.vue">
+    <entry file="file://$PROJECT_DIR$/fe/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe/src/views/user.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="144" selection-start-line="144" selection-end-line="145" />
+        <state relative-caret-position="665">
+          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fe/src/views/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="120" column="60" selection-start-line="120" selection-start-column="60" selection-end-line="120" selection-end-column="60" />
+        <state relative-caret-position="419">
+          <caret line="341" column="60" lean-forward="true" selection-start-line="341" selection-start-column="13" selection-end-line="341" selection-end-column="60" />
           <folding>
             <element signature="n#style#0;n#v-row#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#v-col#0;n#v-row#0;n#v-container#0;n#template#0;n#!!top" />
-            <element signature="n#v-col#1;n#v-row#0;n#v-container#0;n#template#0;n#!!top" />
             <element signature="n#v-row#1;n#v-container#0;n#template#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe/src/layout/home/Drawer.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="16" column="62" lean-forward="true" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe/src/layout/home/AppBar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="44" column="10" lean-forward="true" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe/src/views/json/mixin/commons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe/src/views/Calculator.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe/src/views/insertModal.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
         </state>
       </provider>
     </entry>

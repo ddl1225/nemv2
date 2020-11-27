@@ -135,6 +135,7 @@
                                 </v-layout>
                             </v-col>
                             <v-col>
+
                                 <div class="text-sm-h5 pl-3">요금제 확인</div>
                                 <v-layout row>
                                     <v-col
@@ -159,7 +160,11 @@
 
                     <v-col clos="12" align-center justify-center>
                         <v-btn @click="feelTotal ">월 예상 납입금 조회하기</v-btn>
-                        {{ cardsValue*cards2Value }}
+                        <div v-if="feelTotalC">
+                            {{ cardsValue*cards2Value  | comma }}
+
+                        </div>
+
                         <v-container v-if="feeContent">
                             //클릭했을떄 1-+ 버튼
                             <div @click="total +=1">
@@ -251,6 +256,7 @@ export default {
             //Click 클릭 확인
             isStatusOn: true,
 
+            feelTotalC:false,
             //요금제 선택 버튼 클릭 확인
             cardsFlag: false,
             //요금제 선택 버튼 클릭 index 값 저장
@@ -258,9 +264,9 @@ export default {
             //요금제 선택 버튼 클릭 cards[index] 값 저장
             cardsValue: 0,
             cards: [
-                {value: 14025,value36: 13200, title: 'PTT 15(新)', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 6,  },
-                {value: 20000,value36: 13200, title: 'PTT 19(新)', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6 },
-                {value: 15005,value36: 13200, title: 'PTT 24(新)', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 },
+                {value: 14025 ,value36: 13200, title: 'PTT 15(新)', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 6,  },
+                {value: 20000 ,value36: 13200, title: 'PTT 19(新)', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6 },
+                {value: 15005 ,value36: 13200, title: 'PTT 24(新)', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 },
                 {value: 6565565,value36: 13200, title: 'PTT 26(新)', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 },
                 {value: 0,value36: 13200, title: 'PTT Full', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 },
             ],
@@ -274,7 +280,17 @@ export default {
                 {value: 1,  title: '2년약정', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 12 },
                 {value: 2, title: '3년약정', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 12 },
             ],
+
         }
+    },
+
+
+
+    filter: {
+      comma: function (value) {
+          var num = new Number(value) ;
+          return num.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
     },
 
     methods:{
@@ -289,10 +305,12 @@ export default {
             // }else {
             //     // alert('선택해주세요');
             // }
+
             if(this.cardsFlag == true && this.cards2Flag == true ) {
-                alert('성공입니다.');
+
+                this.feelTotalC = !this.feelTotalC;
             }else {
-                alert('선택해주세요');
+                alert('사용하실 요금제와 약정기간을 선택해 주세요');
             }
 
         },

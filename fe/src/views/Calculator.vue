@@ -1,40 +1,38 @@
 <template>
-        <v-container>
-            <v-col>
-                <v-btn @click="feesum_Click"> 열기</v-btn>
-                <v-container v-if="feesum_Open">
-                    <h1>이다빈</h1>
-                    <v-row>
-                       <v-col >
-                           <h1>이름</h1>
-                           v-layout
-                       </v-col>
-                       <v-col >
-                           <h1>나이</h1>
-                       </v-col>
+    <v-container>
+      <v-row>
+          <!--vue-->
+          <v-col cols="3"><v-btn @click="openInsertModal()">회원등록</v-btn></v-col>
 
-                    </v-row>
-                </v-container>
-            </v-col>
-        </v-container>
+        <!--vue-->
+        <insert-modal :showModalFlag="insertModalFlag" @closeModalCall="closeInsertModal" ></insert-modal>
+      </v-row>
+        <v-row v-if="userForm != null">
+            아이디: {{userForm.loginId}} 이름: {{userForm.name}} 소속: {{userForm.enterpriseId}} 레벨: {{userForm.level}}
+        </v-row>
+    </v-container>
 </template>
-
 <script>
-    export default {
-        name: 'calculator',
-    data(){
-            return{
-                feesum_Open:true
 
+    import insertModal from "./insertModal.vue";
+
+    export default {
+        components:{insertModal},
+        data(){
+            return{
+                insertModalFlag: false,
+                userForm: null,
             }
         },
         methods:{
-            feesum_Click: function () {
-                this.feesum_Open = !this.feesum_Open
-            }
+            openInsertModal: function (){
+                //회원등록 버튼 클릭.vue
+                this.insertModalFlag = !this.insertModalFlag
+            },
+            closeInsertModal: function (data){
+                console.log('closeInsertModal() '+data);
+                this.insertModalFlag = data;
+            },
         }
-
     }
-
-
 </script>
