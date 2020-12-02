@@ -14,83 +14,83 @@
                 ></v-data-table>
                 <!--<v-btn   @click="showEditBtn();">수정하기</v-btn>-->
                 <insertModal3 :showModalFlag3="showModal3" :updatesum="editedItem" @updateCloseModal="updateCloseModal"></insertModal3>
-                <!--<v-row v-if="userForm != null" >-->
-                    <!--아이디: {{userForm.loginId}} 이름: {{userForm.name}} 소속: {{userForm.enterpriseId}} 레벨: {{userForm.level}}-->
-                <!--</v-row>-->
-                <!--<v-col row>-->
-                    <!--<h1>유저 페이지</h1>-->
-                    <!--<v-card>-->
-                        <!--<v-card-title primary-title>-->
-                            <!--<div class="">-->
-                                <!--<h3 class="headline mb-0">get</h3>-->
-                            <!--</div>-->
-                        <!--</v-card-title >-->
-                        <!--<v-card-text>-->
-                            <!--<v-textarea v-model="getMd">-->
+                <v-row v-if="userForm != null" >
+                    아이디: {{userForm.loginId}} 이름: {{userForm.name}} 소속: {{userForm.enterpriseId}} 레벨: {{userForm.level}}
+                </v-row>
+                <v-col row>
+                    <h1>유저 페이지</h1>
+                    <v-card>
+                        <v-card-title primary-title>
+                            <div class="">
+                                <h3 class="headline mb-0">get</h3>
+                            </div>
+                        </v-card-title >
+                        <v-card-text>
+                            <v-textarea v-model="getMd">
 
-                            <!--</v-textarea>-->
-                        <!--</v-card-text>-->
+                            </v-textarea>
+                        </v-card-text>
 
-                        <!--<v-card-actions>-->
-                            <!--<v-btn  color="orange" @click="getReq">submit</v-btn>-->
+                        <v-card-actions>
+                            <v-btn  color="orange" @click="getReq">submit</v-btn>
 
-                        <!--</v-card-actions>-->
-                    <!--</v-card>-->
+                        </v-card-actions>
+                    </v-card>
 
-                    <!--<v-card>-->
-                        <!--<v-card-title primary-title>-->
-                            <!--<div class="">-->
-                                <!--<h3 class="headline mb-0">post</h3>-->
-                            <!--</div>-->
-                        <!--</v-card-title >-->
-                        <!--<v-card-text>-->
-                            <!--<v-textarea v-model="postMd">-->
+                    <v-card>
+                        <v-card-title primary-title>
+                            <div class="">
+                                <h3 class="headline mb-0">post</h3>
+                            </div>
+                        </v-card-title >
+                        <v-card-text>
+                            <v-textarea v-model="postMd">
 
-                            <!--</v-textarea>-->
-                        <!--</v-card-text>-->
+                            </v-textarea>
+                        </v-card-text>
 
-                        <!--<v-card-actions>-->
-                            <!--<v-btn  color="orange" @click="postReq">submit</v-btn>-->
+                        <v-card-actions>
+                            <v-btn  color="orange" @click="postReq">submit</v-btn>
 
-                        <!--</v-card-actions>-->
-                    <!--</v-card>-->
+                        </v-card-actions>
+                    </v-card>
 
-                    <!--<v-card>-->
-                        <!--<v-card-title primary-title>-->
-                            <!--<div class="">-->
-                                <!--<h3 class="headline mb-0">put</h3>-->
-                            <!--</div>-->
-                        <!--</v-card-title >-->
-                        <!--<v-card-text>-->
-                            <!--<v-textarea v-model="putMd">-->
+                    <v-card>
+                        <v-card-title primary-title>
+                            <div class="">
+                                <h3 class="headline mb-0">put</h3>
+                            </div>
+                        </v-card-title >
+                        <v-card-text>
+                            <v-textarea v-model="putMd">
 
-                            <!--</v-textarea>-->
-                        <!--</v-card-text>-->
+                            </v-textarea>
+                        </v-card-text>
 
-                        <!--<v-card-actions>-->
-                            <!--<v-btn  color="orange" @click="putReq">submit</v-btn>-->
+                        <v-card-actions>
+                            <v-btn  color="orange" @click="putReq">submit</v-btn>
 
-                        <!--</v-card-actions>-->
-                    <!--</v-card>-->
+                        </v-card-actions>
+                    </v-card>
 
-                    <!--<v-card>-->
-                        <!--<v-card-title primary-title>-->
-                            <!--<div class="">-->
-                                <!--<h3 class="headline mb-0">del</h3>-->
-                            <!--</div>-->
-                        <!--</v-card-title >-->
-                        <!--<v-card-text>-->
-                            <!--<v-textarea v-model="delMd">-->
+                    <v-card>
+                        <v-card-title primary-title>
+                            <div class="">
+                                <h3 class="headline mb-0">del</h3>
+                            </div>
+                        </v-card-title >
+                        <v-card-text>
+                            <v-textarea v-model="delMd">
 
-                            <!--</v-textarea>-->
-                        <!--</v-card-text>-->
+                            </v-textarea>
+                        </v-card-text>
 
-                        <!--<v-card-actions>-->
-                            <!--<v-btn  color="orange" @click="delReq">submit</v-btn>-->
+                        <v-card-actions>
+                            <v-btn  color="orange" @click="delReq">submit</v-btn>
 
-                        <!--</v-card-actions>-->
-                    <!--</v-card>-->
-                <!--</v-col>-->
+                        </v-card-actions>
+                    </v-card>
+                </v-col>
 
             </v-flex>
         </v-layout>
