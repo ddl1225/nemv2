@@ -1,16 +1,17 @@
 <template>
     <div id="modalPage">
         <v-navigation-drawer
-                v-model="showModal"
+                v-model="showModal3"
                 :fixed="true"
                 bottom right
                 temporary
                 width="500px"
                 :stateless="processFlag"
+                @input="visibleModal($event)"
         >
             <v-container>
                 <v-card-title>
-                    <span class="headline">운영자등록</span>
+                    <span class="headline">운영자수정</span>
                 </v-card-title>
                 <v-card-text class="px-0">
                     <v-container class="px-1">
@@ -20,11 +21,11 @@
                                 <v-col cols="1" align-self="center" >*</v-col>
                                 <v-col cols="2" align-self="center" ><span class="">소속</span></v-col>
                                 <v-col cols="9" class="pa-2 pl-0 pr-2">
-                                    <v-select :items="enterpriseArray" v-model="modalComponent.enterpriseId"
+                                    <v-select :items="[]" v-model="modalComponent.enterpriseId"
                                               class="pa-0 ma-0 rounded-0" single-line
                                               placeholder="선택하세요." dense hide-details="true"
                                               color="primary" height="36" outlined
-                                                item-text="value" item-value="value"
+                                              item-text="value" item-value="value"
                                     ></v-select>
                                 </v-col>
                             </v-row>
@@ -33,7 +34,7 @@
                                 <v-col cols="1" align-self="center" >*</v-col>
                                 <v-col cols="2" align-self="center" ><span class="">등급</span></v-col>
                                 <v-col cols="9" class="pa-2 pl-0 pr-2">
-                                    <v-select :items="levelArray" v-model="modalComponent.level"
+                                    <v-select :items="[]" v-model="modalComponent.level"
                                               class="pa-0 ma-0 rounded-0" single-line
                                               placeholder="선택하세요." dense hide-details="true"
                                               color="primary" height="36" outlined
@@ -101,11 +102,11 @@
                 </v-card-text>
                 <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn small tile depressed outlined color="primary" width="100" height="40" @click="closeModal()" >닫기</v-btn>
-                    <v-btn small tile depressed dark color="primary" width="100" height="40" class="pr-2" @click="changeDataAxios()" >저장<br>(F2)</v-btn>
+                    <v-btn small tile depressed outlined color="primary" width="100" height="40" @click="mobileCloseModal()" >닫기</v-btn>
+                    <v-btn small tile depressed dark color="primary" width="100" height="40" class="pr-2" @click="changeMobileDataAxios()" >저장<br>(F2)</v-btn>
                 </v-card-actions>
             </v-container>
-c
+
         </v-navigation-drawer>
     </div>
 </template>
@@ -114,9 +115,9 @@ c
     import {CommonsDoc} from "./json/mixin/commons";
 
     export default {
-
         props:{
-            showModalFlag:Boolean,
+            showModalFlag3:Boolean,
+            updatesum:{ type: Object },
         },
         components: {  },
         created () { }, updated () { },
@@ -128,7 +129,8 @@ c
         },
         data() {
             return {
-                showModal: this.showModalFlag /*모달 띄우기 키*/
+                showModal3: this.showModalFlag3 /*모달 띄우기 키*/
+
                 , modalComponent: {
                     enterpriseId: ''
                     ,level: ''
@@ -151,13 +153,27 @@ c
             }
         },
         watch: {
-            showModalFlag: function () {
-                this.showModal= this.showModalFlag;
-                console.log('showModalFlag Watch');
-                if(this.showModal=== true) this.resetComponent();
+            showModalFlag3: function () {
+                // this.showModal3= this.showModalFlag3;
+                // console.log('showModalFlag3 Watch');
+                // if(this.showModal3=== true) this.resetComponent();
+                this.showModal3= this.showModalFlag3;
             },
-            showModal: function () {
-                console.log('showModal Watch');
+            showModal3: function () {
+                console.log('showModal3 Watch');
+            },
+            updatesum: function () {
+                console.log('showModal1');
+                this.resetComponent();
+                if ( !(typeof this.updatesum  == 'undefined'||this.updatesum == null)){
+                    this.modalComponent.enterpriseId=this.updatesum.enterpriseId;
+                    this.modalComponent.level=this.updatesum.level;
+                    this.modalComponent.loginId=this.updatesum.loginId;
+                    this.modalComponent.password=this.updatesum.password;
+                    this.modalComponent.name=this.updatesum.name;
+                    this.modalComponent.phone=this.updatesum.phone;
+                    this.modalComponent.memo=this.updatesum.memo;
+                }
             },
         },
         computed: { /*testShow(){return this.showModalFlag}*/},
@@ -173,11 +189,11 @@ c
                     return;
                 }
                 if(event === false){
-                    var con_test = await confirm("운영자 등록을 취소하시겠습니까?");
+                    var con_test = await confirm("운영자 수정을 취소하시겠습니까?");
                     if(con_test === true){
                         this.closeModal();
                     } else {
-                        this.showModal=true;
+                        this.showModal3=false;
                         this.$emit('visibleModal',true);
                     }
                 }
@@ -193,20 +209,28 @@ c
                 this.modalComponent.phone = '';
                 this.modalComponent.memo = '';
             },
+            closeModal() {
+                this.$emit('updateCloseModal',false);
+            },
             validateComponent () {
                 //this.changeDataAxios()
                 if(this.$refs.postForm.validate() === true) {
                     this.changeDataAxios();
                 }
             },
-            closeModal() {
-                this.$emit('closeModalCall',false);
+            //닫기
+            updateCloseModal() {
+                this.$emit('updateCloseModal',false);
             },
-            changeDataAxios: async function () {
-                this.$emit('changeDataAxios',this.modalComponent);
-                this.$emit('closeModalCall',false);
+            //확인
+            changeMobileDataAxios: async function () {
+                this.$emit('changeMobileDataAxios',this.modalComponent);
+                this.$emit('mobileCloseModal',false);
 
             },
+
+            // this.$emit('selectObject',{'stringKey':'editItem','returnType':'Object','select':Object.assign({}, item)})
+
         }, mixins: [CommonsDoc]
     }
 

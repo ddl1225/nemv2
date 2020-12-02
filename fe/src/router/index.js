@@ -28,9 +28,9 @@ const routes = [
         // meta: { src: require('@/assets/about.jpg') },
       },
       {
-        path: 'infor',
-        name: 'infor',
-        component: () => import("@/views/infor.vue"),
+        path: 'information',
+        name: 'information',
+        component: () => import("@/views/information.vue"),
         // meta: { src: require('@/assets/about.jpg') },
       },
       {

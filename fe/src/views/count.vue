@@ -9,8 +9,8 @@
     export default {
         name: 'countView',
 
-        // props:['nameOfChild'],
-        props:{
+        props:['nameOfChild'],
+        userInputModal:{
             nameOfChild:{
                 type:Number,
                 default: 0

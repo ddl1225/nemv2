@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91bd6584-1fb0-436b-babf-cb58cda5e67e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fe/src/views/insertModal.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/src/views/json/mixin/commons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/fe/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/src/views/Calculator.vue" beforeDir="false" afterPath="$PROJECT_DIR$/fe/src/views/Calculator.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/src/views/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/fe/src/views/index.vue" afterDir="false" />
-    </list>
+    <list default="true" id="91bd6584-1fb0-436b-babf-cb58cda5e67e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,20 +12,20 @@
     <splitter split-orientation="horizontal" split-proportion="0.6027907">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/fe/src/views/Calculator.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
+                <state relative-caret-position="594">
+                  <caret line="18" selection-start-line="18" selection-end-line="19" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/fe/src/views/insertModal.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="594">
-                  <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
+                <state relative-caret-position="233">
+                  <caret line="134" column="32" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -144,8 +137,8 @@
       <find>cards</find>
       <find>feelTotalC</find>
       <find>CommonsService</find>
-      <find>password_check</find>
       <find>closeModalCall</find>
+      <find>password_check</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -245,7 +238,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606466185528" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1606468562970" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../olligo-admin" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -287,12 +280,12 @@
       <updated>1605600442398</updated>
       <workItem from="1605600445185" duration="25690000" />
       <workItem from="1606089363989" duration="72697000" />
-      <workItem from="1606436470735" duration="20782000" />
+      <workItem from="1606436470735" duration="22157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119169000" />
+    <option name="totallyTimeSpent" value="120544000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="33" width="2575" height="1415" extended-state="6" />
@@ -572,17 +565,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe/src/views/Calculator.vue">
+    <entry file="file://$PROJECT_DIR$/fe/src/views/insertModal.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
+        <state relative-caret-position="233">
+          <caret line="134" column="32" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe/src/views/insertModal.vue">
+    <entry file="file://$PROJECT_DIR$/fe/src/views/Calculator.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
-          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
+          <caret line="18" selection-start-line="18" selection-end-line="19" />
         </state>
       </provider>
     </entry>

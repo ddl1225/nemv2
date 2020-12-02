@@ -23,9 +23,11 @@
                     <v-row>
                         <div>
                             <v-btn
+
                                     color="red">
                                 제품문의하기
                             </v-btn>
+                            <insertModal></insertModal>
                         </div>
                         <div>
                             <v-btn
@@ -172,54 +174,6 @@
                             </div>
                         </v-container>
                     </v-col>
-
-
-
-                    <!--<v-row dense>-->
-                        <!--<v-col-->
-                                <!--v-for="card in cards"-->
-                                <!--:key="card.title"-->
-                                <!--:cols="card.flex"-->
-                                <!--:rules="usernameRules"-->
-
-                        <!--&gt;-->
-                            <!--<v-card>-->
-                                <!--<v-img-->
-                                        <!--:src="card.src"-->
-                                        <!--class="white&#45;&#45;text align-end"-->
-                                        <!--gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"-->
-                                        <!--height="100px"-->
-                                <!--&gt;-->
-                                    <!--<v-card-title v-text="card.title"></v-card-title>-->
-                                <!--</v-img>-->
-
-                                <!--<v-card-actions>-->
-                                    <!--<v-spacer></v-spacer>-->
-
-                                    <!--<v-btn icon>-->
-                                        <!--<v-icon>mdi-heart</v-icon>-->
-                                    <!--</v-btn>-->
-
-                                    <!--<v-btn icon>-->
-                                        <!--<v-icon>mdi-bookmark</v-icon>-->
-                                    <!--</v-btn>-->
-
-                                    <!--<v-btn icon>-->
-                                        <!--<v-icon>mdi-share-variant</v-icon>-->
-                                    <!--</v-btn>-->
-                                <!--</v-card-actions>-->
-                            <!--</v-card>-->
-                        <!--</v-col>-->
-                    <!--</v-row>-->
-                   <!--<v-row>-->
-                       <!--<v-col cols="6">-->
-                           <!--<v-card>-->
-
-                           <!--</v-card>-->
-                       <!--</v-col>-->
-                       <!--<v-col cols="6"></v-col>-->
-                   <!--</v-row>-->
-
                 </v-container>
             </v-col>
         </v-row>
@@ -232,11 +186,14 @@
                 <countView :nameOfChild="counter"></countView>
             </v-col>
         </v-row>
+        <v-btn @click="clickModal()">등록하기</v-btn>
+        <insertModal :showModal="clickNewModalFlag" @closeModalBtn="closeModalBtn"></insertModal>
     </v-container>
 </template>
 
 <script>
     import countView from './count.vue';
+    import insertModal from "./insertModal.vue";
 export default {
     // props:{
     //     sum: {
@@ -248,6 +205,9 @@ export default {
 
     data(){
         return{
+            clickNewModalFlag:false,
+
+
             //요금 예상 금액 텍스트
             //월 예상 납입금 조회하기 클릭 확인
             feeContent: false,
@@ -341,17 +301,21 @@ export default {
 
                 this.cards2Value = this.cards2[index].value;
             }
-
-
-
             },
 
         getTitle : function (index) {
             return index+"번 방이야.";
+        },
+        clickModal: function(){
+            this.clickNewModalFlag = !this.clickNewModalFlag
+        },
+        closeModalBtn:function (value) {
+            console.log('closeModalBtn()' +value);
         }
     },
     components:{
-        countView
+        countView,
+        insertModal
     },
     computed:{
     }

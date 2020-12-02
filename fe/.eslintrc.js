@@ -12,7 +12,7 @@ module.exports = {
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off"
   },
   // vue.config.js
-    devServer: {
-      overlay: false
-    }
+  //   devServer: {
+  //     overlay: false
+  //   }
 };

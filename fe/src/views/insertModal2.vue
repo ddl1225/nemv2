@@ -7,6 +7,7 @@
                 temporary
                 width="500px"
                 :stateless="processFlag"
+                @input="visibleModal($event)"
         >
             <v-container>
                 <v-card-title>
@@ -24,7 +25,7 @@
                                               class="pa-0 ma-0 rounded-0" single-line
                                               placeholder="선택하세요." dense hide-details="true"
                                               color="primary" height="36" outlined
-                                                item-text="value" item-value="value"
+                                              item-text="value" item-value="value"
                                     ></v-select>
                                 </v-col>
                             </v-row>
@@ -101,11 +102,11 @@
                 </v-card-text>
                 <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn small tile depressed outlined color="primary" width="100" height="40" @click="closeModal()" >닫기</v-btn>
-                    <v-btn small tile depressed dark color="primary" width="100" height="40" class="pr-2" @click="changeDataAxios()" >저장<br>(F2)</v-btn>
+                    <v-btn small tile depressed outlined color="primary" width="100" height="40" @click="mobileCloseModal()" >닫기</v-btn>
+                    <v-btn small tile depressed dark color="primary" width="100" height="40" class="pr-2" @click="changeMobileDataAxios()" >저장<br>(F2)</v-btn>
                 </v-card-actions>
             </v-container>
-c
+
         </v-navigation-drawer>
     </div>
 </template>
@@ -129,6 +130,7 @@ c
         data() {
             return {
                 showModal: this.showModalFlag /*모달 띄우기 키*/
+                ,processFlag: false
                 , modalComponent: {
                     enterpriseId: ''
                     ,level: ''
@@ -154,19 +156,18 @@ c
             showModalFlag: function () {
                 this.showModal= this.showModalFlag;
                 console.log('showModalFlag Watch');
-                if(this.showModal=== true) this.resetComponent();
+                if(this.showModal=== true){
+                    this.resetComponent();
+                }
+
             },
             showModal: function () {
                 console.log('showModal Watch');
             },
+
         },
         computed: { /*testShow(){return this.showModalFlag}*/},
         methods: {
-            _keyListener: function(e) {
-                if(this.showModal === true && this.$store.getters['flagsModule/getIsLoading'] === false){
-                    if (e.keyCode === 113 ) { this.validateComponent();}
-                }
-            },
             visibleModal: async function (event){
                 if(this.processFlag === true && event === false) {
                     this.processFlag = false;
@@ -178,7 +179,6 @@ c
                         this.closeModal();
                     } else {
                         this.showModal=true;
-                        this.$emit('visibleModal',true);
                     }
                 }
             },
@@ -193,20 +193,21 @@ c
                 this.modalComponent.phone = '';
                 this.modalComponent.memo = '';
             },
-            validateComponent () {
-                //this.changeDataAxios()
-                if(this.$refs.postForm.validate() === true) {
-                    this.changeDataAxios();
-                }
-            },
             closeModal() {
-                this.$emit('closeModalCall',false);
+                this.$emit('mobileCloseModal',false);
             },
-            changeDataAxios: async function () {
-                this.$emit('changeDataAxios',this.modalComponent);
-                this.$emit('closeModalCall',false);
+            //닫기
+            mobileCloseModal() {
+                this.$emit('mobileCloseModal',false);
+            },
+            //확인
+            changeMobileDataAxios: async function () {
+                this.$emit('changeMobileDataAxios',this.modalComponent);
+                this.processFlag = true;
+                this.$emit('mobileCloseModal',false);
 
             },
+
         }, mixins: [CommonsDoc]
     }
 

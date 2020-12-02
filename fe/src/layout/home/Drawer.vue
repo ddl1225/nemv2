@@ -4,31 +4,19 @@
             absolute
             bottom
             temporary
+            right
+            v-on="$listeners"
+            v-bind="$attrs"
     >
         <v-list
                 nav
                 dense
         >
-            <v-list-item-group
+          <v-list-item
 
-                    active-class="deep-purple--text text--accent-4"
-            >
-                <v-list-item>
-                    <v-list-item-title>Foo</v-list-item-title>
-                </v-list-item>
+          >
 
-                <v-list-item>
-                    <v-list-item-title>Bar</v-list-item-title>
-                </v-list-item>
-
-                <v-list-item>
-                    <v-list-item-title>Fizz</v-list-item-title>
-                </v-list-item>
-
-                <v-list-item>
-                    <v-list-item-title>Buzz</v-list-item-title>
-                </v-list-item>
-            </v-list-item-group>
+          </v-list-item>
         </v-list>
     </v-navigation-drawer>
 </template>
@@ -42,11 +30,10 @@
         },
         data(){
             return{
-                items: [
-                    { title: 'Home', icon: 'mdi-view-dashboard',route:'/' },
-                    { title: 'About', icon: 'mdi-forum', route:'/user'},
-                    { title: 'Calculator', icon: 'mdi-forum', route:'/calculator'},
-                ],
+                items: {
+                    type: Array,
+        default: () => ([]),
+                },
 
             }
         }

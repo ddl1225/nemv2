@@ -15,8 +15,8 @@
                         right
                         icons-and-text>
                     <v-tab
-                            v-for="item in items"
-                            :key="item.title"
+                            v-for="(item,index) in toolbars"
+                            :key="index.title"
                             link
                             router :to="item.route"
                             color="black"
@@ -41,6 +41,7 @@
             ></v-app-bar-nav-icon>
         </v-app-bar>
         <home-drawer
+
                 :drawer="drawer"
         />
     </v-container>
@@ -60,11 +61,11 @@
             return{
                 tab: null,
                 drawer: false,
-                items: [
+                toolbars: [
                     { title: '홈',route:'/' },
                     { title: '라져', route:'/user'},
                     { title: '디지털 무전기',route:'/calculator'},
-                    { title: '라져솔루션',route:'/info'},
+                    { title: '라져솔루션',route:'/information'},
                     { title: 'loT',route:'/address'},
                     { title: '가입신청',route:'/join'},
                     { title: '모바일',route:'/mobile'},
