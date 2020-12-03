@@ -9,11 +9,11 @@
                         :items="userinformation"
                         sort-by="calories"
                         class="elevation-1"
-                        width="100%"
+                        mobile-breakpoint
                         @click:row="showEditBtn"
                 ></v-data-table>
                 <!--<v-btn   @click="showEditBtn();">수정하기</v-btn>-->
-                <insertModal3 :showModalFlag3="showModal3" :updatesum="editedItem" @updateCloseModal="updateCloseModal"></insertModal3>
+                <insertModal3 :showModalFlag3="showModal3" :updatesum="editedItem" @updateCloseModal="updateCloseModal" @updateMobileDataAxios="updateMobileDataAxios"></insertModal3>
                 <v-row v-if="userForm != null" >
                     아이디: {{userForm.loginId}} 이름: {{userForm.name}} 소속: {{userForm.enterpriseId}} 레벨: {{userForm.level}}
                 </v-row>
@@ -108,6 +108,9 @@ import insertModal3 from "./insertModal3.vue";
         props:{
 
         },
+        watch:{
+
+        },
     data(){
       return{
           userinformation2:null,
@@ -120,25 +123,24 @@ import insertModal3 from "./insertModal3.vue";
           putMd: '',
           delMd: '',
           headers:[
-              {text: "이름", value: "enterpriseId", width:"80px", class: "px-2",divider: true,align: 'center' },
-              {text: "나이",value: "level", width:"80px", class: "px-2",divider: true,align: 'center' },
-              {text: "성별", value: "loginId", width:"80px", class: "px-2",divider: true,align: 'center' },
-              {text: "성별", value: "password", width:"80px", class: "px-2",divider: true,align: 'center' },
-              {text: "성별", value: "name", width:"80px", class: "px-2",divider: true,align: 'center' },
-              {text: "성별", value: "phone", width:"80px", class: "px-2",divider: true,align: 'center' },
-              {text: "성별", value: "memo", width:"80px", class: "px-2",divider: true,align: 'center' },
+              {text: "소속", value: "enterpriseId", width:"80px", class: "px-2",divider: true,align: 'center' },
+              {text: "등급",value: "level", width:"80px", class: "px-2",divider: true,align: 'center' },
+              {text: "아이디", value: "loginId", width:"80px", class: "px-2",divider: true,align: 'center' },
+              {text: "비밀번호", value: "password", width:"80px", class: "px-2",divider: true,align: 'center' },
+              {text: "성명", value: "name", width:"80px", class: "px-2",divider: true,align: 'center' },
+              {text: "메모", value: "phone", width:"80px", class: "px-2",divider: true,align: 'center' },
+
           ],
           userinformation:[
-              {"enterpriseId":"올리고","level":"","loginId":"kk1","password":"","name":"","phone":"","memo":""},
-              {"enterpriseId":"올리고","level":"","loginId":"kk2","password":"","name":"","phone":"","memo":""},
-              {"enterpriseId":"올리고","level":"","loginId":"kk3","password":"","name":"","phone":"","memo":""},
-              {"enterpriseId":"올리고","level":"","loginId":"kk4","password":"","name":"","phone":"","memo":""},
-              {"enterpriseId":"올리고","level":"","loginId":"kk5","password":"","name":"","phone":"","memo":""},
-              {"enterpriseId":"올리고","level":"","loginId":"kk6","password":"","name":"","phone":"","memo":""},
+              {"enterpriseId":"1","level":"2","loginId":"3","password":"4","name":"5","phone":"6","memo":"7"},
+              {"enterpriseId":"15654","level":"28664644","loginId":"8883","password":"4","name":"5","phone":"6","memo":"7"},
+              {"enterpriseId":"14564","level":"45646462","loginId":"485863","password":"4","name":"5","phone":"6","memo":"7"},
+              {"enterpriseId":"18454","level":"87852","loginId":"3","password":"4","name":"5","phone":"6","memo":"7"},
+              {"enterpriseId":"157485","level":"246646","loginId":"3666768","password":"4","name":"5","phone":"6","memo":"7"},
           ],
+          editIndex: 0,
           editedItem: {"enterpriseId":"","level":"","loginId":"","password":"","name":"","phone":"","memo":""},
-
-
+          editedItem2:{},
       }
     },
    mounted (){
@@ -168,11 +170,39 @@ import insertModal3 from "./insertModal3.vue";
                 // console.log(MouseEvent);
                 // this.userinformation2.push((Object.assign({}, data)));
                 console.log('들어왔따');
+                this.editIndex = this.userinformation.indexOf(data);
+                console.log('['+this.editIndex+']');
                 this.showModal3 =  true;
             },
             updateCloseModal:function(){
-                this.showModal3=false;
+                this.showModal3 =!this.showModal3;
+                // this.userinformation=[];
+                // this.tableList = res.data.data;
             },
+            // updateMobileDataAxios:function(data){
+            //     console.log(data);
+            //
+            // },
+        updateMobileDataAxios: function (data)
+        {
+        console.log(data);
+        // (object.assign({},this.userinformation[this.editIndex].data));
+        // let update = object.assign({},this.userinformation[this.editIndex].data);
+        // this.userinformation.push((Object.assign({}, data)))
+        // let updated=Object.assign({},,data);
+        // Object.assign({},editedItem2,{editedItem:Object.assign({},this.userinformation[this.editIndex].data),});
+        // Object.assign(this.userinformation[this.editIndex],data);
+        console.log(typeof this.userinformation[this.editIndex].loginId);
+        console.log(typeof data.loginId);
+        Object.assign(this.userinformation[this.editIndex].loginId,data.loginId);
+        Object.assign(this.userinformation[this.editIndex],Object.assign({},{"loginId":data.loginId}));
+        // cloneDeep({},this.userinformation[this.editIndex],data);
+
+        // this.editedItem2= Object.assign({},(Object.assign({},this.userinformation[this.editIndex], {"loginId": data.loginId})));
+        // console.log("editedItem2");
+        console.log(this.userinformation[this.editIndex]);
+
+        },
 
 
         getReq(){

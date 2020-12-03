@@ -110,6 +110,7 @@
         //    저장하기 버튼
             saveAdminBtn: function (data) {
                 console.log(data);
+
             }
         },
 

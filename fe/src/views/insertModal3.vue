@@ -21,7 +21,7 @@
                                 <v-col cols="1" align-self="center" >*</v-col>
                                 <v-col cols="2" align-self="center" ><span class="">소속</span></v-col>
                                 <v-col cols="9" class="pa-2 pl-0 pr-2">
-                                    <v-select :items="[]" v-model="modalComponent.enterpriseId"
+                                    <v-select :items="[enterpriseArray]" v-model="modalComponent.enterpriseId"
                                               class="pa-0 ma-0 rounded-0" single-line
                                               placeholder="선택하세요." dense hide-details="true"
                                               color="primary" height="36" outlined
@@ -34,7 +34,7 @@
                                 <v-col cols="1" align-self="center" >*</v-col>
                                 <v-col cols="2" align-self="center" ><span class="">등급</span></v-col>
                                 <v-col cols="9" class="pa-2 pl-0 pr-2">
-                                    <v-select :items="[]" v-model="modalComponent.level"
+                                    <v-select :items="[levelArray]" v-model="modalComponent.level"
                                               class="pa-0 ma-0 rounded-0" single-line
                                               placeholder="선택하세요." dense hide-details="true"
                                               color="primary" height="36" outlined
@@ -102,8 +102,8 @@
                 </v-card-text>
                 <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn small tile depressed outlined color="primary" width="100" height="40" @click="mobileCloseModal()" >닫기</v-btn>
-                    <v-btn small tile depressed dark color="primary" width="100" height="40" class="pr-2" @click="changeMobileDataAxios()" >저장<br>(F2)</v-btn>
+                    <v-btn small tile depressed outlined color="primary" width="100" height="40" @click="closeModal()" >닫기</v-btn>
+                    <v-btn small tile depressed dark color="primary" width="100" height="40" class="pr-2" @click="updateMobileDataAxios()" >수정완료<br>(F2)</v-btn>
                 </v-card-actions>
             </v-container>
 
@@ -154,10 +154,12 @@
         },
         watch: {
             showModalFlag3: function () {
-                // this.showModal3= this.showModalFlag3;
-                // console.log('showModalFlag3 Watch');
-                // if(this.showModal3=== true) this.resetComponent();
                 this.showModal3= this.showModalFlag3;
+                console.log('showModalFlag3 Watch');
+                if(this.showModal3=== true){
+                    this.resetComponent();
+                }
+                // this.showModal3= this.showModalFlag3;
             },
             showModal3: function () {
                 console.log('showModal3 Watch');
@@ -189,12 +191,12 @@
                     return;
                 }
                 if(event === false){
-                    var con_test = await confirm("운영자 수정을 취소하시겠습니까?");
+                    var con_test = await confirm("운영자 수정을 취소 하시겠습니까?");
                     if(con_test === true){
                         this.closeModal();
                     } else {
-                        this.showModal3=false;
-                        this.$emit('visibleModal',true);
+                        this.showModal3=true;
+                        // this.$emit('visibleModal',true);
                     }
                 }
             },
@@ -212,20 +214,15 @@
             closeModal() {
                 this.$emit('updateCloseModal',false);
             },
-            validateComponent () {
-                //this.changeDataAxios()
-                if(this.$refs.postForm.validate() === true) {
-                    this.changeDataAxios();
-                }
-            },
             //닫기
             updateCloseModal() {
                 this.$emit('updateCloseModal',false);
             },
             //확인
-            changeMobileDataAxios: async function () {
-                this.$emit('changeMobileDataAxios',this.modalComponent);
-                this.$emit('mobileCloseModal',false);
+            updateMobileDataAxios: async function () {
+                this.$emit('updateMobileDataAxios',this.modalComponent);
+                this.processFlag = true;
+                this.$emit('updateCloseModal',false);
 
             },
 
