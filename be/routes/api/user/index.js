@@ -15,22 +15,51 @@ router.get('/', function(req, res, next) {
 });
 //보낸다
 router.post('/', function(req, res, next) {
-    console.log(req.query)
-    console.log(req.body)
-    res.send({success: true , msg: '포스트'})
+    const {name,age} = req.body
+    const u = new User({name,age})
+    u.save()
+        .then(r=> {
+            res.send({success:true, msg:r})
+        })
+        .catch(e =>{
+           res.send({success: false, msg:e.message})
+        })
+    // console.log(req.query)
+    // console.log(req.body)
+    // res.send({success: true , msg: '포스트'})
 });
 
 //수정
-router.put('/', function(req, res, next) {
-    console.log(req.query)
-    console.log(req.body)
-    res.send({success: true, msg: '수정'  })
+//url 파라미터넘기는법
+router.put('/:id', function(req, res, next) {
+    const id =req.params.id
+    const {name,age} = req.body
+    User.updateOne({_id: id}, {$set:{name, age}})
+        .then(r=> {
+            res.send({success:true, msg:r})
+        })
+        .catch(e =>{
+            res.send({success: false, msg:e.message})
+        })
+
+    // console.log(req.query)
+    // console.log(req.body)
+    // res.send({success: true, msg: '수정'  })
 });
 //삭제
-router.delete('/', function(req, res, next) {
-    console.log(req.query)
-    console.log(req.body)
-    res.send({success: true , msg: '삭제'})
+router.delete('/:id', function(req, res, next) {
+    const id =req.params.id
+    User.deleteOne({_id: id})
+        .then(r=> {
+            res.send({success:true, msg:r})
+        })
+        .catch(e =>{
+            res.send({success: false, msg:e.message})
+        })
+    res.send({success: true , msg: 'del OK'})
+    // console.log(req.query)
+    // console.log(req.body)
+    // res.send({success: true , msg: '삭제'})
 });
 
 
